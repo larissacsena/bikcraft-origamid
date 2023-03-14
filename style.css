@@ -1,0 +1,168 @@
+body {
+  background: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+p,
+a,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+p {
+  font-size: 1.25rem;
+}
+header {
+  margin: 3.75rem 0;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.75rem;
+}
+nav ul {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+li a {
+  display: inline-block;
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.9rem 1.25rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+}
+li a:hover {
+  border: 2px solid #ee2211;
+  /* padding: 13px 18px; */
+}
+main {
+  display: grid;
+  justify-content: center;
+}
+.content {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+}
+.description h1 {
+  position: relative;
+}
+.description h1::after {
+  content: " ";
+  background: #ee2211;
+  display: block;
+  height: 6px;
+  width: 70px;
+  position: absolute;
+  top: -40px;
+  right: -75px;
+}
+.description {
+  display: grid;
+  grid-template-columns: auto;
+  background: white;
+  text-align: right;
+  place-content: center;
+  padding: 40px;
+  gap: 20px;
+}
+.description a {
+  background: #ee2211;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  place-self: end;
+  padding: 15px 25px;
+  border-radius: 4px;
+}
+.description a:hover {
+  background: #900;
+}
+
+main img {
+  max-width: 100%;
+  display: block;
+}
+main img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.content h2 {
+  color: #c6c6c6;
+  font-size: 64px;
+  text-align: right;
+  place-self: center;
+  padding: 40px;
+  background-image: url("/img/onda.svg");
+  text-transform: uppercase;
+}
+.advantage {
+  display: grid;
+  gap: 10px;
+  background: white;
+  padding: 20px;
+}
+.advantage-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+  gap: 10px;
+}
+.advantage-item img {
+  grid-column: 1;
+}
+.advantage-item h3,
+.advantage-item p {
+  grid-column: 2;
+}
+section .advantage-item:nth-child(odd) {
+  background: #f7f7f7;
+}
+.advantage .advantage-item:hover {
+  /* background: #900; */
+  border-left: 3px solid #ee2211;
+}
+footer {
+  margin-top: 60px;
+  display: flex;
+  background: white;
+  padding: 40px;
+}
+footer p {
+  margin: 0 auto;
+  /* display: flex; */
+}
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+    /* gap: 2rem; */
+    font-size: 1rem;
+  }
+  .description h1::after {
+    margin: 0;
+    height: 0;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .description a {
+    place-self: center;
+  }
+  .description p {
+    word-break: break-all;
+    max-width: 75ch;
+    font-size: 1rem;
+  }
+}
